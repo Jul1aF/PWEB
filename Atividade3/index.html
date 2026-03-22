@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Proteção contra XSS e CSRF</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body> <header class="header">
+        <div>
+            <a href="#home">Inicio</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobreXSS">O que é XSS?</a></li>
+                <li><a href="#comofuncionaXSS">Como funciona XSS?</a></li>
+                <li><a href="#comoprevinirXSS">Como previnir XSS</a></li>
+                <li><a href="#sobreCSRF">O que é CSRF?</a></li>
+                <li><a href="#comoprevinirCSRF">Como previnir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <main>
+        <div class="container"> 
+            
+            <section class="coluna">
+                <div class="card2">
+                    <h1>XSS</h1>
+                </div>
+
+                <div class="card" id="sobreXSS">
+                    <h2>O que é XSS?</h2>
+                    <p>Cross-Site Scripting (XSS) é uma vulnerabilidade de segurança em aplicações web que permite a injeção de scripts maliciosos em páginas visualizadas por outros usuários.</p>
+                </div>
+
+                <div class="card" id="comofuncionaXSS">
+                    <h2>Como funciona?</h2>
+                    <p>O ataque de XSS acontece quando scripts maliciosos são injetados em páginas legítimas para capturar informações sensíveis, como tokens de sessão.</p>
+                </div>
+
+                <div class="card" id="comoprevinirXSS">
+                    <h2>Como prevenir?</h2>
+                    <ul> 
+                        <li>Nunca confiar nos dados enviados pelo usuário</li>
+                        <li>Filtrar caracteres especiais.</li>
+                        <li>Converter caracteres como < e > em entidades HTML (&lt; e &gt;) antes de exibir no navegador.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="coluna">
+                <div class="card2">
+                    <h1>CSRF</h1>
+                </div>
+
+                <div class="card" id="sobreCSRF">
+                    <h2>O que é CSRF?</h2>
+                    <p>O CSRF (Cross-Site Request Forgery) induz um usuário autenticado a executar ações indesejadas em uma aplicação na qual ele está logado.</p>
+                </div>
+
+                <div class="card" id="comoprevinirCSRF">
+                    <h2>Como prevenir?</h2>
+                    <ul>
+                        <li>Implementar Tokens Anti-CSRF.</li>
+                        <li>Utilizar cookies com atributo SameSite.</li>
+                        <li>Exigir re-autenticação para ações críticas.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+        
+    </main>
+    <p><small>
+        Pesquisa realizada para a aula de PWeb. <sub>03/2026</sub>
+    </small></p>
+</body>
+
+</html>
