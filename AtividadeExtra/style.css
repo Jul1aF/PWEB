@@ -1,0 +1,52 @@
+body {
+
+    font-family: Aharoni, Tahoma;
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/fundo.jpg);
+    background-size: cover;
+}
+
+
+
+.titulo{
+
+    font-family: Aharoni;
+    color: rgb(252, 188, 246);
+    text-shadow: 20px 20px 10px aliceblue;
+    text-align: center;
+
+}
+
+.imagem {
+    max-width: 100px;
+    width: 100%;      
+    height: auto;    
+  }
+
+
+
+  .container{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    justify-content: center;
+    gap: 40px;
+    box-sizing: border-box;
+  }
+
+
+
+  .card{
+    display: flex;
+    flex-direction: column; /* Organiza título, imagem e texto em coluna dentro do card */
+    align-items: center;    /* Centraliza o conteúdo do card */
+    width: 300px;  
+    height: 400px;        
+    background-color: aliceblue;
+    border: 1px solid #ff51e8;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+
+}
