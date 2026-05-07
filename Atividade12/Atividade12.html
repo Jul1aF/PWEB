@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+    <script>
+        function calcular() {
+            if (document.forms.formulario1.elements[0].value == "") {
+                alert("Preencha campo BASE corretamente!");
+                document.forms.formulario1.elements[0].focus();
+                return false;
+            };
+
+            if (document.forms.formulario1.elements["idAltura"].value == "") {
+                alert("Preencha campo ALTURA corretamente!");
+                document.forms.formulario1.elements.idAltura.focus();
+               return false;
+            }
+
+            let retangulo = new Object();
+            retangulo.base = document.forms.formulario1.elements["idBase"].value;
+            retangulo.altura = document.forms.formulario1.elements["idAltura"].value;
+
+            
+
+            return alert("Área: " + retangulo.base*retangulo.altura);
+        
+        }
+    </script>
+</head>
+<body>
+    <form method="POST" name="formulario1" id="formulario1">
+
+        <div id="principal" width=200 heigth=200 align=center>
+            Base:
+            <input name="idBase" type="text" id="idBase" size="52" maxlength="150">
+            <br>
+            <br> Altura:
+            <input name="idAltura" type="text" id="idAltura" size="52" maxlength="150">
+            <br>
+            <br>
+            <br>
+            <input name="Submit" type="submit" form="formulario1" value="Submit" onclick ="calcular();">
+            <input name="Reset" type="reset" form="formulario1" value="Redefinir">
+        </div>
+    </form>
+</body>
+</html>
