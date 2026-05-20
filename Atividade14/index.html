@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 14</title>
+</head>
+<body>
+
+    <form id="meuForm">
+        <input type="radio" id="caseBaixa" name="opcaoCaixa" onclick="alternarTexto(0)">
+        <label for="caseBaixa">Minúscula</label>
+
+        <input type="radio" id="caseAlta" name="opcaoCaixa" onclick="alternarTexto(1)">
+        <label for="caseAlta">Maiúscula</label>
+        
+        <br><br>
+
+        <input type="text" id="txtUsuario" name="txtUsuario" style="max-width: 400px; width: 100%;">
+    </form>
+    
+</body>
+<script>
+function alternarTexto(tipoFormatacao) {
+    var elementoTexto = document.getElementById("txtUsuario");
+    
+    if (tipoFormatacao == 0) {
+        elementoTexto.value = elementoTexto.value.toLowerCase();
+    } 
+    if (tipoFormatacao == 1) {
+        elementoTexto.value = elementoTexto.value.toUpperCase();
+    }
+}
+</script>
+</html>
